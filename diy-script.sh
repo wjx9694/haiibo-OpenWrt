@@ -28,7 +28,6 @@ function git_sparse_clone() {
 }
 
 # 添加额外插件
-git clone --depth=1 -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush package/luci-app-serverchan
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
@@ -42,6 +41,8 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/l
 git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
 git_sparse_clone main https://github.com/haiibo/packages luci-theme-atmaterial luci-theme-opentomcat luci-theme-netgear
 
+# 添加 MT7921U 驱动支持
+git_sparse_clone openwrt-23.05 https://github.com/immortalwrt/immortalwrt package/kernel/mt76
 
 # 晶晨宝盒
 git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
