@@ -41,9 +41,6 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/l
 git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
 git_sparse_clone main https://github.com/haiibo/packages luci-theme-atmaterial luci-theme-opentomcat luci-theme-netgear
 
-# 添加 MT7921U 驱动支持
-git_sparse_clone openwrt-23.05 https://github.com/immortalwrt/immortalwrt package/kernel/mt76
-
 # 晶晨宝盒
 git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
 sed -i "s|firmware_repo.*|firmware_repo 'https://github.com/haiibo/OpenWrt'|g" package/luci-app-amlogic/root/etc/config/amlogic
