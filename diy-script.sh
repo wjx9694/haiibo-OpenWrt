@@ -41,6 +41,10 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/l
 git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
 git_sparse_clone main https://github.com/haiibo/packages luci-theme-atmaterial luci-theme-opentomcat luci-theme-netgear
 
+# Add luci-app-lucky
+git clone --depth=1 -b 2.13.4 https://github.com/DHDAXCW/luci-app-lucky
+rm -rf ../../customfeeds/packages/net/lucky
+
 # 晶晨宝盒
 git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
 sed -i "s|firmware_repo.*|firmware_repo 'https://github.com/haiibo/OpenWrt'|g" package/luci-app-amlogic/root/etc/config/amlogic
