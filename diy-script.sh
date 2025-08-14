@@ -7,7 +7,7 @@
 # sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
 # TTYD 免登录
-# sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
+sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
 
 # 移除要替换的包
 rm -rf feeds/packages/net/msd_lite
@@ -34,10 +34,6 @@ git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-a
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
 
-
-# Add luci-app-lucky
-git clone --depth=1 -b 2.13.4 https://github.com/DHDAXCW/luci-app-lucky
-rm -rf ../../customfeeds/packages/net/lucky
 
 # 晶晨宝盒
 git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
